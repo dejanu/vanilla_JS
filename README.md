@@ -1,5 +1,5 @@
 # vanilla_JS
-Basic JS concepts
+Basic JS concepts: https://wesbos.com/courses/
 
 
  V8 =  JS engine for Chrome  
