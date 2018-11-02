@@ -58,17 +58,33 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+
    window.addEventListener('keydown', function (e){
-   //select the key
+     console.log(e);
+   //use backtick for string literal format
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key=])
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    //log the audio
     if (!audio) return;
     //rewind to start for multiple keydowns
     audio.currentTime = 0;
     audio.play();
+    //jquery key.classList.add('playing');
+    //vanilla
+    key.classList.add('playing');
    });
+
+
+function removeTransition (e){
+    if (e.propertyName !== 'transform') return;
+      this.classList.remove('playing')
+}
+   //select all keys from DOM
+   const keys = document.querySelectorAll('.key');
+
+   //each key will have an eventListener add it to it and call the removeTransition function
+   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+  
 </script>
 
 
