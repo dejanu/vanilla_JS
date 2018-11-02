@@ -8,3 +8,9 @@ Basic JS concepts: https://wesbos.com/courses/
 
 
 `document.querySelector(#id .class)`
+
+
+Falsy values : undefined, null '', false, 0, NaN     
+Truthy: 1, 'some_string'
+Strict Eq "===" have the same value and type     
+Loose Eq "==" have same value but can be different type '1' == 1
