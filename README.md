@@ -8,3 +8,7 @@ Basic JS concepts: https://wesbos.com/courses/
 
 
 `document.querySelector(#id .class)`
+
+
+Falsy values : undefined, null '', false, 0, NaN  
+Truthy: 1, 'some_string'
